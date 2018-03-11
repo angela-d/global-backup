@@ -1,6 +1,4 @@
 #!/bin/bash
-SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 #configure stuff
 USER="your_db_user"
