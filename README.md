@@ -4,7 +4,6 @@ Tested & operable out-of-the-box in Debian / Ubuntu / CentOs Linux distributions
 
 > ## Features
 > Seamlessly & silently generate backups of both databases and website/configuration content
-
 > Automate purging of obsolete backups (default is five-day intervals)
 
 ## Configure your script
@@ -15,15 +14,21 @@ Tested & operable out-of-the-box in Debian / Ubuntu / CentOs Linux distributions
  * To change the frequency in which your backups are automatically purged, adjust `-mtime +5` to whatever you want; ie. to purge 7 day old backups, change to: `-mtime +7`
  
  ## Install
- - Add a cron, if you wish for the script to be run nightly:
+ Add a cron, if you wish for the script to be run nightly:
  
  *As root*, run: 
  
  1)`crontab -e` to open the cron editor
  
- 2) Add to the bottom of the crontab: `45 2 * * * /your/path/backup.sh` to run a backup every morning at 2:45am
+ 2) Add to the bottom of the crontab: 
+ ```bash
+ 45 2 * * * /your/path/backup.sh` to run a backup every morning at 2:45am
+ ```
  
- 3) Ensure the file is executable: `chmod +x /your/path/backup.sh`
+ 3) Ensure the file is executable:
+ ```bash
+ chmod +x /your/path/backup.sh
+ ```
  
  4) Test it: `sh /your/path/backup.sh` and you should see the backup progress in your terminal.
  
